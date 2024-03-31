@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ITMD 441: Lab 3</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITMD 441: Lab 3</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script async src="js/script.js"></script>
+  </head>
+  <body>
     <div class="box">
+      <form action="">
         <h3>ITMD 441 - Lab 3 - Gabi Bartolo</h3>
         <h1>Tip Calculator</h1>
+        <label for="bill">Bill Amount:</label>
+        <input type="text" name="Bill" id="bill" />
+        <label for="slider">Tip % :</label>
+        <input id="slider" type="range" min="1" max="100" value="50" />
         
+        <!--Calculation Results-->
+        <label for="percent">Tip Percentage:</label>
+        <input class="results" type="text" name="percent" id="percent" value="">
+
+        <label for="amount">Tip Amount:</label>
+        <input class="results" type="text" name="amount" id="amount" value="">
+        
+        <label for="total">Total Bill with Tip:</label>
+        <input class="results" type="text" name="total" id="total" value="">
+      </form>
     </div>
-</body>
+  </body>
 </html>

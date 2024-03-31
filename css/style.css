@@ -1,0 +1,13 @@
+body{
+    background: #c8f4bca5;
+}
+
+.box{
+    border: 2px;
+    background: #61795ba5;
+    width: 60vw;
+    height: fit-content;
+    text-align: center;
+    margin: auto auto;
+
+}
