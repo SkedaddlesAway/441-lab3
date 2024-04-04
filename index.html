@@ -10,23 +10,31 @@
   </head>
   <body>
     <div class="box">
-      <form action="">
-        <h3>ITMD 441 - Lab 3 - Gabi Bartolo</h3>
-        <h1>Tip Calculator</h1>
-        <label for="bill">Bill Amount:</label>
-        <input type="text" name="Bill" id="bill" />
-        <label for="slider">Tip % :</label>
-        <input id="slider" type="range" min="1" max="100" value="50" />
-        
-        <!--Calculation Results-->
-        <label for="percent">Tip Percentage:</label>
-        <input class="results" type="text" name="percent" id="percent" value="">
-
-        <label for="amount">Tip Amount:</label>
-        <input class="results" type="text" name="amount" id="amount" value="">
-        
-        <label for="total">Total Bill with Tip:</label>
-        <input class="results" type="text" name="total" id="total" value="">
+      <form id="calculator">
+        <h3 class="headings">ITMD 441 - Lab 3 - Gabi Bartolo</h3>
+        <h1 class="headings">Tip Calculator</h1>
+        <p id="errorMssg"></p>
+        <div class="inputs"> 
+          <label for="bill">Bill Amount:</label>
+          <input type="number" step="0.1" name="Bill" id="bill" min="0" onchange="calculate()"/>
+        </div>
+        <div class="inputs" id="range"> 
+          <label for="slider">Tip %:</label>
+          <input id="slider" type="range" min="0" max="100" value="20" onchange="calculate()"/>   
+        </div>        
+        <div class="inputs">
+          <!-- Calculation Results -->
+          <label for="percent">Tip Percentage:</label>
+          <input class="results" type="text" name="percent" id="percent" value="0%" disabled>
+        </div>
+        <div class="inputs"> 
+          <label for="amount">Tip Amount:</label>
+          <input class="results" type="text" name="amount" id="amount" value="$0" disabled>
+        </div>
+        <div class="inputs">   
+          <label for="total">Total Bill with Tip:</label>
+          <input class="results" type="text" name="total" id="total" value="$0" disabled>  
+        </div>
       </form>
     </div>
   </body>
