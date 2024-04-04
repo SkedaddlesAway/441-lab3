@@ -1,9 +1,3 @@
-
-// percent.value = tipValue + "%";
-// amount.value = (bill * tip / 100).toFixed(2);
-// total.value =  (bill + parseFloat(amount)).toFixed(2);
-
-//calculations
 calculate = () =>{
   //active inputs
   const bill = document.getElementById('bill').value
@@ -14,13 +8,15 @@ calculate = () =>{
   let amount = document.getElementById('amount')
   let total = document.getElementById('total')
 
-  if (isNaN(bill)) {
+  if (isNaN(parseFloat(bill))) {
     errorMssg.innerHTML =("Please enter a number for Bill Amount.");
   }
   else{
-    percent.value = tip + "%" 
-    amount.value = "$" + (bill * tip / 100).toFixed(2);
-    total.value =  "$" + (bill + parseFloat(amount)).toFixed(2);
+    errorMssg.innerHTML = null;
+    percent.value = tip + "%"; 
+    tipAmnt = (bill * tip / 100);
+    amount.value = "$" + tipAmnt;
+    total.value =  "$" + (+bill + +tipAmnt);
   }
 }
 
